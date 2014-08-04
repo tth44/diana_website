@@ -1,0 +1,89 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Diana Bogdan</title>
+<link rel="stylesheet" href="{% static "www/css/style.css" %}" media="screen, projection" />
+<!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{% block additionalCss %} {% endblock %}
+</head>
+<body>
+	<div id="blockpage">
+		<header>
+			<a href="/"><div id="title">
+					<h1>Diana Bogdan</h1>
+					<h2>Architect</h2>
+				</div></a>
+
+
+		</header>
+		<nav>
+			<ul class="nav-main">
+				{% for c in cats %}
+					{% if c.project_set.all%}
+					<li><a class="toggle-sub" href="{{ c.get_absolute_url }}">{{ c.title }}<img
+						src="{% static "www/images/down.gif" %}" alt="down_arrow"/></a>
+						<ul class="sub-menu">
+						{% for p in c.project_set.all %}
+								<li><a href="{{ p.get_absolute_url }}">{{ p.display_title }}</a></li>
+							
+						{% endfor %}
+						</ul></li>
+					{% comment %}
+					{% elif c.subcvcategory_set.all %}
+						<li><a class="toggle-sub" href="{{ c.get_absolute_url }}">{{ c.title }}<img
+						src="{% static "www/images/down.gif" %}" alt="down_arrow"/></a>
+						<ul class="sub-menu">
+						{% for sub in c.subcvcategory_set.all %}
+								<li><a href="{{ sub.get_absolute_url }}">{{ sub.display_title }}</a></li>
+							
+						{% endfor %}
+						</ul></li>
+					{% endcomment %}
+					{% else %}
+						<li><a href="{{ c.get_absolute_url }}">{{ c.title }}</a></li>
+					{% endif %}
+					
+				{% endfor %}
+				
+			</ul>
+				<a  id="dlpdf" href="{{ MEDIA_URL}}dianabogdan.pdf" title="Download my CV"><img src="{% static "www/images/pdf.png" %}" alt="pdf" /></a>
+ 		</nav>
+		<section>
+			{% block content %}
+			<h1>{{item.title}}</h1>
+			<article>
+				{{ item.description|safe}}
+			</article>
+			{% endblock %}
+		</section>
+
+		<footer>
+		<div class="separator"><!-- only to add border on top --></div>
+			<div class="contactme">
+				<h1>Diana BOGDAN</h1>
+				<h2>Architect</h2>
+				<h3>Contact Me:</h3>
+				<a href="mailto:dianacbogdan@gmail.com"><img src="{% static "www/images/mail.png" %}" alt="mail" /></a> <a
+								href="#"><img src="{% static "www/images/linkedin.png" %}" alt="linkedin"/></a>
+			</div>
+
+			<div class="about">
+				<h1>About</h1>
+				<blockquote>&ldquo;I'm Diana BOGDAN, a dynamic
+					architect. I'm looking for opportunities which can be a new
+					challenge.&rdquo;</blockquote>
+			</div>
+		</footer>
+	
+	</div>
+
+	{% block script %}
+	<script src="{% static "www/js/jquery.js" %}" type="text/javascript" charset="utf-8"></script>
+	<script src="{% static "www/js/menu.js" %}" type="text/javascript" charset="utf-8"></script>
+	{% endblock %}
+</body>
+</html>

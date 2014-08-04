@@ -1,0 +1,50 @@
+@CHARSET "ISO-8859-1";
+
+
+
+.slider-content{
+	
+	
+	overflow: hidden;
+	
+
+}
+
+
+
+.slider-content .toggle{
+	
+	background-color: Rgba(0,0,0,0.75);
+	
+	font-weight: normal;
+	
+	padding:10px;
+	
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	
+	cursor: pointer;
+	
+	
+
+}
+
+.slider-content-hidden{
+    
+    margin-left:10px;
+    margin-right:10px;
+    
+}
+.slider-content-hidden h1{
+    
+    font-weight:normal;
+    
+}
+
+.slider-content-hidden p{
+    
+    padding-right:10px;
+    padding-left:10px;
+    
+}

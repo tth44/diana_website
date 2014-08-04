@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block additionalCss %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static "css/portfolioSummary.css" %}" media="screen, projection" />
+
+{% endblock %}
+
+{% block content %}
+
+
+<h1>{{ cat.title }}</h1>
+	<article>
+		<div class= "sum-portfolio">
+		
+		{% if projectsAndPicOnTop.items %}
+		<ul>
+			{% for p,i in projectsAndPicOnTop.items %}
+				{% if i %}
+			<li><a href="{{ p.get_absolute_url}}" >
+			<img src="{{ MEDIA_URL }}{{i.mini}}" alt="{{i.title}}" />
+			
+			<div class="sum-portfolio-caption">
+			<h1>{{p.display_title}}</h1>
+			</div>
+			
+			</a></li>
+				{% endif %}
+			{% endfor %}
+			
+		</ul>
+		{% else %}
+			<p>Sorry no Project to display</p>
+		{% endif %}
+		</div>
+	</article>
+
+{% endblock %}
+
+{% block script %} {{ block.super }}
+<script src="{% static "www/js/jquery-ui.min.js" %}" type="text/javascript" charset="utf-8"></script>
+<script src="{% static "js/portfolio_sum.js" %}" type="text/javascript" charset="utf-8"></script>
+
+{% endblock %}

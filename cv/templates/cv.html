@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% block additionalCss %}
+<link rel="stylesheet" href="{% static "css/cv.css" %}" media="screen, projection" />
+{% endblock %}
+
+
+
+{% block content %}
+
+{% for s in sub %}
+	<article>
+	<h1>{{s.title}}</h1>
+	{{s.description|safe}}
+	
+	{% for i in s.cvitem_set.all %}
+		<div class="slider-main">
+			<div class="slider-content">
+				<h3 class= "toggle">{{i.title}}</h3>
+				<div class="slider-content-hidden">
+				
+					{{i.description|safe}}
+				</div>
+			</div>
+		
+		
+		</div>
+	
+	
+	{% endfor %}
+	</article>
+{% endfor %}
+
+{% endblock %}
+
+{% block script %} {{ block.super }} 
+<<script src="{% static "js/slider.js" %}" type="text/javascript" charset="utf-8"></script>
+
+{% endblock %}

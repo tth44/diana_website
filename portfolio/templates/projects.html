@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block additionalCss %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static "css/viewer.css" %}" media="screen, projection"/>
+<link rel="stylesheet" href="{% static "css/prettyPhoto.css" %}" media="screen, projection"/>
+
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<h1>{{project.title}}</h1>
+				{% if images %}
+				<article>
+				<div class="viewer">
+					<div class="viewer-panels">
+					{% for img in images %}
+						<div class="viewer-panel">
+							<a href="{{ MEDIA_URL }}{{ img.full}}" rel="prettyPhoto[gal]" title="{{img.description}}">
+							<img src="{{ MEDIA_URL }}{{ img.medium}}" alt="{{img.title}}" /></a>
+						</div>
+					{% endfor%}
+					</div>	
+					<div class="viewer-nav">
+					<h1>Photo Gallery:</h1>
+						<ul>
+							{% for img in images %}
+							<li><span><img src="{{ MEDIA_URL }}{{ img.mini}}" alt="{{ img.title}}" />{{ img.title}}</span></li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+				</article>
+				<div class="separator"></div>
+				{% endif %}
+			<article>
+			
+			{{ project.description|safe }}
+			</article>
+{% endblock %}
+
+
+{% block script %} {{ block.super }} 
+{% load staticfiles %}
+<script src="{% static "js/jquery.prettyPhoto.js" %}" type="text/javascript" charset="utf-8"></script>
+<script src="{% static "js/viewer.js" %}" type="text/javascript" charset="utf-8"></script>
+<!-- Fullsize viewer launcher -->
+<script type="text/javascript" charset="utf-8">
+			  $(document).ready(function(){
+				$("a[rel^='prettyPhoto']").prettyPhoto();
+			  });
+			</script>
+
+{% endblock %}

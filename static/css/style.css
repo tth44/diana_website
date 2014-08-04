@@ -1,0 +1,429 @@
+/*global*/
+#blockpage
+{
+	
+	width: 900px;
+	
+	margin: auto;
+	
+	margin-top:0px;
+	
+	padding: 0px;
+	
+
+}
+
+
+
+
+body
+{
+	
+	background-image: url('../images/background3.jpg');
+	background-position:50% 30%;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	
+	font-family: 'Verdana';
+	
+	color: white;
+	
+	font-weight:normal;
+	
+
+}
+
+
+
+
+a
+ {
+
+	text-decoration: none;
+}
+
+
+.separator{
+	border-bottom: 1px dotted white;
+	
+}
+
+
+/*header*/
+header
+{
+	
+	height: 25%;
+	
+	padding-left: 5px;
+	
+	margin-bottom: 10px;
+	
+
+}
+
+
+
+#title{
+	
+	text-align: left;
+	width: 35%;
+    color:white;
+	
+	
+
+}
+
+
+
+#title h1 h2{
+	text-transform: uppercase;
+	
+
+}
+
+
+#title h1
+{
+    text-transform: uppercase;
+	margin-bottom:0px;
+	
+	font-size: 1.7em;
+	
+	
+
+}
+
+
+
+#title h2
+{
+	text-transform: uppercase;
+	font-size: 1.2em;
+	 
+	margin: 0px;
+	
+	
+
+}
+
+
+/*navigateur*/
+nav
+{
+	
+	position: relative;
+	display: inline-block;
+	
+	background-color:Rgba(0,0,0,0.5);
+	width: 100%;
+	margin-left:1px;
+	
+	
+
+}
+
+#dlpdf {
+	
+    position: absolute;
+		right: 0;
+		display: block;
+    margin-right: 5px;
+		margin-top: 3px;
+    
+}
+
+
+#dlpdf img{
+	max-height: 30px;
+    
+}
+
+
+
+/*top level menu*/
+nav ul{
+	
+	margin: 0;
+	
+	padding: 0;
+	
+	list-style-type: none;
+	
+	z-index:100;
+	
+
+
+}
+
+
+nav ul li{
+	
+	display:inline-block;
+	
+	float:left;
+	
+	margin-left:0px;
+	
+	padding:0;
+	
+	
+
+}
+
+
+
+nav ul li a{
+	
+	display: inline-block;
+	
+	padding: 8px 10px;
+	
+	border-right: 1px solid #778;
+	
+	margin:0;
+	
+	font-size: 0.9em;
+	
+	font-weight:bold;
+	color: white;
+	
+	
+
+}
+
+
+
+.toggle-sub{
+	
+	padding-right: 21px;
+	
+
+
+}
+
+
+.toggle-sub img{
+	
+	position:relative;
+	
+	left:10px;
+	
+
+
+}
+
+
+
+
+/*sub menu*/
+.sub-menu{
+	
+	display: none;
+	
+	position:absolute;
+	
+	width: 170px;
+	
+	background-color:Rgba(0,0,0,0.7);
+	
+	box-shadow: 5px 5px 5px #aaa;
+	
+	
+
+}
+
+
+
+.sub-menu li{
+	
+	display: list-item;
+	
+	float: none;
+	
+	
+	
+	
+	
+
+}
+
+
+
+.sub-menu a{
+	
+	font-size: 0.8em;
+	
+	font-weight:bold;
+	
+	border-bottom: 1px solid #778;
+	
+	border-right:0;
+	
+	width:160px;
+	
+	padding: 5px;
+	
+
+}
+
+
+
+nav ul li a:hover
+{
+		
+	background-color: black;
+	
+	text-decoration: none;
+	
+	color: white;
+	
+
+}
+
+
+
+/*image centre*/
+#banniere
+{
+		
+	margin-top: 15px;
+	
+	position: relative;
+	
+	background-image: url('/media/banner.jpg');
+	
+	height:200px;
+	
+	box-shadow: 0px 4px 4px #1c1a19;
+	
+	margin-bottom: 15px;
+	
+	
+	
+
+}
+
+
+
+/*Section*/
+section{
+	
+	min-height: 350px;
+	margin-top: 30px;
+    padding-top:20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	background-color: Rgba(0,0,0,0.5);
+	
+
+}
+
+section li {
+    font-size:0.8em;
+}
+
+section>h1{
+	
+	font-size:1.2em;
+    margin-top:0;
+	margin-bottom:10px;
+	text-transform:uppercase;
+    
+	
+
+}
+
+
+article{
+    padding-left: 5px;
+    padding-right:5px;
+    margin-top:10px;
+    padding-bottom:10px;
+	
+    
+}
+article p {
+     padding-left: 50px;
+    padding-right:50px;
+    text-indent:20px;
+    text-align:justify;
+	font-size: 0.8em;
+    
+    
+}
+
+/*footer*/
+
+
+footer{
+	position:relative;
+    background-color: Rgba(0,0,0,0.5);
+	padding:10px;
+	
+}
+
+.contactme {
+	display: inline-block;
+	position:relative;
+}
+footer h1, h2{
+	font-size:1.1em;
+	font-weight:bold;
+	margin:0;
+}
+
+.contactme h3{
+	font-size: 0.8em;
+	font-weight:bold;
+	margin-top:0px;
+	margin-bottom:3px;
+}
+
+
+.contactme img{
+	height:25px;
+	margin:0;
+}
+
+/* #SkypeButton{
+	position: absolute;
+	left:8px;
+	top:4px;
+}
+
+#SkypeButton p{
+   margin:0px;
+    width:57px;
+    overflow:hidden;
+}
+#SkypeButton a{
+  display:block;
+    margin:0px;
+    width:57px;
+    height:25px;
+    overflow:hidden;
+}
+
+#SkypeButton p img{
+   margin:0px;
+   
+} */
+
+
+.about {
+	float:right;
+	width:250px;
+	text-align:right;
+}
+
+.about h1{
+	margin-bottom:5px;
+	text-align:center;
+}
+.about blockquote{
+    font-size: 0.8em;
+    margin:0px;
+    font-style:italic;
+}

@@ -1,0 +1,6 @@
+/__init__.pyc
+/admin.pyc
+/context_processors.pyc
+/forms.pyc
+/models.pyc
+/views.pyc

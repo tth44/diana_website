@@ -1,0 +1,172 @@
+.viewer{
+    	padding:10px;
+}
+
+
+.viewer-panels{
+	
+	
+	position: relative;
+	
+	
+	margin:auto;
+
+	
+	height:300px;
+	
+    width:500px;
+	
+	overflow:hidden;
+	
+	
+
+
+}
+
+
+
+
+
+.viewer-panel-active{
+	
+	visibility:visible;
+	
+	
+
+
+}
+
+.viewer-panel-active img{
+    display:block;
+    margin:auto;
+    
+}
+
+
+
+.viewer-panel{
+	
+	
+    position:absolute;
+	
+    left:0;
+	
+    top:0;
+	
+	visibility:hidden;
+	
+	
+
+
+}
+
+
+
+
+
+
+
+.viewer-nav{
+	
+    width:100%;
+	
+	overflow:hidden;
+	
+	margin-top:10px;
+	
+
+    
+
+
+}
+
+
+
+.viewer-nav h1{
+	
+	
+	font-size:0.8em;
+	
+	margin-bottom: 5px;
+	
+	font-weight:normal;
+	
+	padding-left:40px;
+    text-transform:uppercase;
+	
+
+
+}
+
+
+.viewer-nav ul {
+	
+	
+	margin-top:0;
+	
+	margin-left:0;
+	
+	list-style-type: none;
+	
+	padding-left:40px;
+	
+	
+
+
+}
+
+
+
+
+
+.viewer-nav ul li{
+	
+	
+	float:left;
+	
+	margin-right:5px;
+	
+	
+
+
+}
+.viewer-nav ul li span{
+	display:block;
+	text-decoration:none;
+	color:white;
+	font-size:0.6em;
+	text-align:center;
+
+}
+
+
+.viewer-nav ul li img{
+	
+	display:block;
+	
+	width:75px;
+	
+	height:50px;
+	
+	overflow:hidden;
+	
+	margin:0;
+	
+	padding:3px;
+	
+
+}
+
+
+
+
+
+.viewer-nav ul li.selected img{
+	
+	padding:0;
+	
+	border: 3px solid white;
+	
+
+
+}

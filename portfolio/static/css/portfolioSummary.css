@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+
+
+.sum-portfolio {
+	
+    position:static;
+	margin-left: auto;
+	margin-right: auto;	
+	width: 700px;
+	
+
+}
+
+.sum-portfolio-caption{
+	position: absolute;
+	display:none;
+	width:100%;
+	height:50px;
+	z-index: 100;
+	bottom:0;
+	background-color: Rgba(0,0,0,0.5);	
+}
+
+.sum-portfolio-caption h1{
+    color:white;
+	font-size:1em;
+    text-align:center;
+	
+}
+.sum-portfolio ul{
+	
+	width:100%;
+	list-style-type: none;
+	padding:0;
+
+}
+
+
+
+.sum-portfolio ul li{
+	
+	display: inline-block;
+    margin: 5px;
+	
+
+}
+
+.sum-portfolio ul li a{
+	display:block;
+	position:relative;
+    height: 154px;
+	
+
+}
+
+.sum-portfolio ul li a img{
+	
+	width: 150px;
+	height: 150px;
+	border: 2px solid white;
+	
+
+}
