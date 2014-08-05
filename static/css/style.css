@@ -361,6 +361,11 @@ article{
 	
     
 }
+
+article>h1{
+	font-size: 1.2em;
+		
+}
 article p {
      padding-left: 50px;
     padding-right:50px;
