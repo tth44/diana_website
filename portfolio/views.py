@@ -27,9 +27,12 @@ def index(request,catSlug):
 
 def detailsProject(request, catSlug, projectSlug):
     
-    
+    print "projectslug: " + projectSlug
+    p = get_object_or_404(Project, slug ="manifesto-urban-decay-to-infinite-recycling")
+    print p.slug
     p = get_object_or_404(Project, slug=projectSlug)
     #if the project does not belong to the category
+    print p
     if p.cat.slug != catSlug:
         raise Http404
     

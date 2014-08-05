@@ -8,7 +8,7 @@ class SubCVCategory(main_app.models.CategoryAbstract):
     
     description = models.TextField(blank = True)
     category = models.ForeignKey('main_app.Category')
-    display_title = models.CharField(max_length = 20, help_text = "Title that you will see in the menu")
+    display_title = models.CharField(max_length = 50, help_text = "Title that you will see in the menu")
     def __unicode__(self):
         return self.title
     

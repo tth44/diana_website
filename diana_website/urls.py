@@ -15,7 +15,7 @@ urlpatterns = patterns('',
     url(r'^cv/', include("cv.urls")),
     url(r'^contact', 'main_app.views.contact', name ='main_app_contact' ),
     url(r'^$', 'main_app.views.home', name='main_app_home'),
-    url(r'^(?P<catSlug>[a-z]+\-*[a-z]+)$', 'main_app.views.index', name='main_app_index'),
+    url(r'^(?P<catSlug>([a-z]+\-*[a-z]+\-*)+)$', 'main_app.views.index', name='main_app_index'),
     
     
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
