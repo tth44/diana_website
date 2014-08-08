@@ -16,6 +16,9 @@
 	
 	background-color: Rgba(0,0,0,0.75);
 	
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000);
+zoom:1;
 	font-weight: normal;
 	
 	padding:10px;

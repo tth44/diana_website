@@ -33,7 +33,10 @@ body
 
 }
 
-
+img {
+	border: 0;
+	
+}
 
 
 a
@@ -116,6 +119,11 @@ nav
 	display: inline-block;
 	
 	background-color:Rgba(0,0,0,0.5);
+	/*internet explore < 8 */
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+	zoom:1;
+	
 	width: 100%;
 	margin-left:1px;
 	
@@ -227,6 +235,11 @@ nav ul li a{
 	
 	background-color:Rgba(0,0,0,0.7);
 	
+	/* internet explore < 8 */
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3000000,endColorstr=#B3000000);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3000000,endColorstr=#B3000000);
+	zoom:1;
+	
 	box-shadow: 5px 5px 5px #aaa;
 	
 	
@@ -317,6 +330,10 @@ section{
 	
 	background-color: Rgba(0,0,0,0.5);
 	
+	/*internet explore < 8 */
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+	zoom:1;
 
 }
 
@@ -344,6 +361,11 @@ article{
 	
     
 }
+
+article>h1{
+	font-size: 1.2em;
+		
+}
 article p {
      padding-left: 50px;
     padding-right:50px;
@@ -360,6 +382,12 @@ article p {
 footer{
 	position:relative;
     background-color: Rgba(0,0,0,0.5);
+    
+    /*internet explore < 8 */
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+	zoom:1;
+	
 	padding:10px;
 	
 }
