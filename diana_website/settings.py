@@ -20,7 +20,7 @@ ALLOWED_HOSTS = ['*']
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
-DATABASES =  {'default' : dj_database_url.config() }
+DATABASES =  {'default' : dj_database_url.parse('postgres://mgrjxzwxtndxrg:M-sbpi4V5N7M0yTWx2Lijs3r1f@ec2-174-129-197-200.compute-1.amazonaws.com:5432/d3rpkqatvcc0s0') }
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
