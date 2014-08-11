@@ -136,9 +136,9 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 #email
 
-EMAIL_HOST= os.environ.get('POSTMARK_SMTP_SERVER')
+EMAIL_HOST= "smtp.postmarkapp.com"#os.environ.get('POSTMARK_SMTP_SERVER')
 EMAIL_PORT= '25'
-EMAIL_HOST_USER= os.environ.get('POSTMARK_API_KEY')
-EMAIL_HOST_PASSWORD = os.environ.get('POSTMARK_API_KEY')
+EMAIL_HOST_USER= "cfc9ce1d-e949-436b-aae1-ba203f5ed9ca"#os.environ.get('POSTMARK_API_KEY')
+EMAIL_HOST_PASSWORD = "cfc9ce1d-e949-436b-aae1-ba203f5ed9ca"#os.environ.get('POSTMARK_API_KEY')
 EMAIL_USE_TLS = True
 

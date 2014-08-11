@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.http import HttpResponse
@@ -9,6 +9,8 @@ from main_app.forms import ContactForm
 from django.contrib.auth.models import User, BaseUserManager
 from django.views.decorators.csrf import csrf_protect
 from django.core.mail import send_mail
+import os
+from postmark import PMMail
 def home(request):   
     category = get_object_or_404(Category, position=1)
     content = category.content_set.first()
@@ -54,7 +56,14 @@ def contact(request):
             if cc_myself:
                 recipients.append(senderEmail)
             send_mail(subject, message, senderEmail, recipients)
-
+            message = PMMail(api_key = os.environ.get('POSTMARK_API_KEY'),
+                 subject = "Hello from Postmark",
+                 sender = "leonard@bigbangtheory.com",
+                 to = "matthieu.desbois44@hotmail.fr",
+                 text_body = "Hello",
+                 tag = "hello")
+            message.send()
+            redirect("/thanks")
     else:    
         # send a empty form
         contact_form = ContactForm()
