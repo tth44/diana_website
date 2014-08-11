@@ -8,7 +8,7 @@ from portfolio.models import Project
 from main_app.forms import ContactForm
 from django.contrib.auth.models import User, BaseUserManager
 from django.views.decorators.csrf import csrf_protect
-
+from django.core.mail import send_mail
 def home(request):   
     category = get_object_or_404(Category, position=1)
     content = category.content_set.first()
