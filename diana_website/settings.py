@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
     'main_app',
     'portfolio',
     'cv',
@@ -109,8 +110,23 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (("www",os.path.join(BASE_DIR, "static")),
 )                   
 
+
+#media file
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#S3 config
+USE_S3 = True
+if USE_S3:
+    AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    
+    S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+    DEFAULT_FILE_STORAGE = 'diana_website.s3utils.MediaRootS3BotoStorage'
+    MEDIA_URL = S3_URL + '/media/'
+
 
 #templates
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
