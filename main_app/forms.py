@@ -4,7 +4,6 @@ Created on Jul 31, 2014
 @author: mdesbois
 '''
 from django import forms
-from main_app.models import Contact
 
 
 class ContactForm(forms.Form):
