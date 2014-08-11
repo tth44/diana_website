@@ -58,8 +58,8 @@ def contact(request):
             send_mail(subject, message, senderEmail, recipients)
             message = PMMail(api_key = os.environ.get('POSTMARK_API_KEY'),
                  subject = "Hello from Postmark",
-                 sender = "leonard@bigbangtheory.com",
-                 to = "matthieu.desbois44@hotmail.fr",
+                 sender = "tth44@hotmail.fr",
+                 to = "matthieu.desbois44@gmail.com",
                  text_body = "Hello",
                  tag = "hello")
             message.send()
