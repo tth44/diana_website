@@ -125,7 +125,7 @@ if USE_S3:
     
     S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
     DEFAULT_FILE_STORAGE = 'diana_website.s3utils.MediaRootS3BotoStorage'
-    MEDIA_URL = S3_URL + '/media/'
+    MEDIA_URL = S3_URL + 'media/'
 
 
 #templates
