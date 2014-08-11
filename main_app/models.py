@@ -72,13 +72,15 @@ class Content(ContentAbstract):
         
 
 
-class Contact(models.Model):
-    
-    email = models.EmailField(primary_key=True)
-    name = models.CharField(max_length=100)
-  
-    
-    def __unicode__(self):
-        return self.name
-    class Meta:
-        app_label = "main_app"
+#===============================================================================
+# class Contact(models.Model):
+#     
+#     email = models.EmailField(primary_key=True)
+#     name = models.CharField(max_length=100)
+#   
+#     
+#     def __unicode__(self):
+#         return self.name
+#     class Meta:
+#         app_label = "main_app"
+#===============================================================================

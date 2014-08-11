@@ -7,7 +7,6 @@ from main_app.models import *
 from portfolio.models import Project
 from main_app.forms import ContactForm
 from django.contrib.auth.models import User, BaseUserManager
-from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_protect
 
 def home(request):   
@@ -39,14 +38,16 @@ def contact(request):
             cc_myself = contact_form.cleaned_data['cc_myself']
             senderEmail = contact_form.cleaned_data['senderEmail']
             
-            #if the contact does not exist, we create it
-            try:
-                contact = Contact.objects.get(pk=senderEmail)
-            except Contact.DoesNotExist:
-                contact = Contact(email = senderEmail,name = senderName )
-                contact.save()
+            #===================================================================
+            # #if the contact does not exist, we create it
+            # try:
+            #     contact = Contact.objects.get(pk=senderEmail)
+            # except Contact.DoesNotExist:
+            #     contact = Contact(email = senderEmail,name = senderName )
+            #     contact.save()
+            #===================================================================
                 
-            dest = User.objects.get_by_natural_key("dbogdan")
+            dest = User.objects.get_by_natural_key("matthieu")
             print dest.email
             recipients = [dest.email]
             recipients.append(dest.email);
