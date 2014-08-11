@@ -11,4 +11,3 @@ class CategoryAdmin(admin.ModelAdmin):
     inlines =[ContentInlines]
     
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Contact)
