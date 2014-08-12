@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 {% block additionalCss %}
-<link rel="stylesheet" href="{% static "css/cv.css" %}" media="screen, projection" />
+<link rel="stylesheet" href="{% static "cv/css/cv.css" %}" media="screen, projection" />
 {% endblock %}
 
 
@@ -35,6 +35,6 @@
 {% endblock %}
 
 {% block script %} {{ block.super }} 
-<<script src="{% static "js/slider.js" %}" type="text/javascript" charset="utf-8"></script>
+<<script src="{% static "cv/js/slider.js" %}" type="text/javascript" charset="utf-8"></script>
 
 {% endblock %}

@@ -2,8 +2,8 @@
 
 {% block additionalCss %}
 {% load staticfiles %}
-<link rel="stylesheet" href="{% static "css/viewer.css" %}" media="screen, projection"/>
-<link rel="stylesheet" href="{% static "css/prettyPhoto.css" %}" media="screen, projection"/>
+<link rel="stylesheet" href="{% static "portfolio/css/viewer.css" %}" media="screen, projection"/>
+<link rel="stylesheet" href="{% static "portfolio/css/prettyPhoto.css" %}" media="screen, projection"/>
 
 {% endblock %}
 
@@ -45,8 +45,8 @@
 
 {% block script %} {{ block.super }} 
 {% load staticfiles %}
-<script src="{% static "js/jquery.prettyPhoto.js" %}" type="text/javascript" charset="utf-8"></script>
-<script src="{% static "js/viewer.js" %}" type="text/javascript" charset="utf-8"></script>
+<script src="{% static "portfolio/js/jquery.prettyPhoto.js" %}" type="text/javascript" charset="utf-8"></script>
+<script src="{% static "portfolio/js/viewer.js" %}" type="text/javascript" charset="utf-8"></script>
 <!-- Fullsize viewer launcher -->
 <script type="text/javascript" charset="utf-8">
 			  $(document).ready(function(){

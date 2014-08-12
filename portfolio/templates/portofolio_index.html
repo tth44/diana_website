@@ -3,7 +3,7 @@
 
 {% block additionalCss %}
 {% load staticfiles %}
-<link rel="stylesheet" href="{% static "css/portfolioSummary.css" %}" media="screen, projection" />
+<link rel="stylesheet" href="{% static "portfolio/css/portfolioSummary.css" %}" media="screen, projection" />
 
 {% endblock %}
 
@@ -39,7 +39,7 @@
 {% endblock %}
 
 {% block script %} {{ block.super }}
-<script src="{% static "www/js/jquery-ui.min.js" %}" type="text/javascript" charset="utf-8"></script>
-<script src="{% static "js/portfolio_sum.js" %}" type="text/javascript" charset="utf-8"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script src="{% static "portfolio/js/portfolio_sum.js" %}" type="text/javascript" charset="utf-8"></script>
 
 {% endblock %}
