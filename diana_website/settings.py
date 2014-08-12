@@ -125,7 +125,9 @@ if USE_S3:
     
     S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
     DEFAULT_FILE_STORAGE = 'diana_website.s3utils.MediaRootS3BotoStorage'
+    STATICFILES_STORAGE = 'diana_website.s3utils.StaticRootS3BotoStorage'
     MEDIA_URL = S3_URL + 'media/'
+    STATIC_URL = S3_URL + 'static/'
 
 
 #templates
@@ -138,7 +140,7 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 EMAIL_HOST= "smtp.postmarkapp.com"#os.environ.get('POSTMARK_SMTP_SERVER')
 EMAIL_PORT= '25'
-EMAIL_HOST_USER= "cfc9ce1d-e949-436b-aae1-ba203f5ed9ca"#os.environ.get('POSTMARK_API_KEY')
-EMAIL_HOST_PASSWORD = "cfc9ce1d-e949-436b-aae1-ba203f5ed9ca"#os.environ.get('POSTMARK_API_KEY')
+EMAIL_HOST_USER= os.environ.get('POSTMARK_API_KEY')
+EMAIL_HOST_PASSWORD = os.environ.get('POSTMARK_API_KEY')
 EMAIL_USE_TLS = True
 
