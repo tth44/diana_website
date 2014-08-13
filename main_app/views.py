@@ -11,6 +11,8 @@ from django.views.decorators.csrf import csrf_protect
 from django.core.mail import send_mail
 import os
 from postmark import PMMail
+from diana_website import settings
+from django.contrib import messages
 def home(request):   
     category = get_object_or_404(Category, position=1)
     content = category.content_set.first()
@@ -52,18 +54,23 @@ def contact(request):
             dest = User.objects.get_by_natural_key("matthieu")
             print dest.email
             recipients = [dest.email]
-            recipients.append(dest.email);
+            cc = ""
             if cc_myself:
+                cc = senderEmail
                 recipients.append(senderEmail)
-            send_mail(subject, message, senderEmail, recipients)
-            message = PMMail(api_key = os.environ.get('POSTMARK_API_KEY'),
-                 subject = "Hello from Postmark",
-                 sender = "tth44@hotmail.fr",
-                 to = "matthieu.desbois44@gmail.com",
-                 text_body = "Hello",
-                 tag = "hello")
-            message.send()
-            redirect("/thanks")
+            #send_mail(subject, message, senderEmail, recipients)
+            #===================================================================
+            # message = PMMail(api_key = settings.API_POSTMARK,
+            #      subject = subject,
+            #      sender = senderEmail,
+            #      to = dest.email,
+            #      text_body = message,
+            #      Cc = cc,
+            #      )
+            # message.send()
+            #===================================================================
+            
+            messages.success(request, '<div class="success">Your email has been sent!!</div>')
     else:    
         # send a empty form
         contact_form = ContactForm()

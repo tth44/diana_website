@@ -8,14 +8,19 @@
 
 
 {% block content %}
+{% if messages %}
+{% for message in messages %}
+{{ message|safe }}
+{% endfor %}
+{% endif %}
 <form action="/contact/" method="post">{% csrf_token %}
     {{ form.non_field_errors }}
     <div class="formField">
-        {{ form.name.errors }}
+        {{ form.senderName.errors }}
       <label for="id_senderName">Your name</label>{{ form.senderName }}
     </div>
     <div class="formField">
-        {{ form.email.errors }}
+        {{ form.senderEmail.errors }}
         <label for="id_senderEmail">Your email</label>{{form.senderEmail}}
     </div>
     <div class="formField">

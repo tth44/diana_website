@@ -31,3 +31,8 @@ input:focus, textarea:focus{
 	
 }
 
+.success{
+	text-align: center;
+	background-color: Rgba(0,153,0,0.7);
+	border: 2px solid wheat;
+}

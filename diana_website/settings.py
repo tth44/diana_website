@@ -32,9 +32,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECRET_KEY = '+gan&czjo@c3cfsg*k#zid)14rww(2*72&87$*akrq86*y7#x@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 
 
@@ -137,10 +137,11 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 #TinyMCE
 
 #email
+EMAIL_HOST = os.environ.get('MAILGUN_SMTP_SERVER')#'smtp.mailgun.org'
+EMAIL_PORT = os.environ.get('MAILGUN_SMTP_PORT')#'587'
+EMAIL_HOST_USER = os.environ.get('MAILGUN_SMTP_LOGIN')#'postmaster@app28365878.mailgun.org'
+EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_SMTP_PASSWORD')#'57iimb4jyfj1'#
 
-EMAIL_HOST= "smtp.postmarkapp.com"#os.environ.get('POSTMARK_SMTP_SERVER')
-EMAIL_PORT= '25'
-EMAIL_HOST_USER= os.environ.get('POSTMARK_API_KEY')
-EMAIL_HOST_PASSWORD = os.environ.get('POSTMARK_API_KEY')
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS =False
+
 
