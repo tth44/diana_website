@@ -58,7 +58,7 @@ def contact(request):
             if cc_myself:
                 cc = senderEmail
                 recipients.append(senderEmail)
-            #send_mail(subject, message, senderEmail, recipients)
+            send_mail(subject, message, senderEmail, recipients)
             #===================================================================
             # message = PMMail(api_key = settings.API_POSTMARK,
             #      subject = subject,
@@ -71,6 +71,7 @@ def contact(request):
             #===================================================================
             
             messages.success(request, '<div class="success">Your email has been sent!!</div>')
+            
     else:    
         # send a empty form
         contact_form = ContactForm()
