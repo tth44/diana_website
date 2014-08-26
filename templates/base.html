@@ -9,6 +9,11 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 {% block additionalCss %} {% endblock %}
+
+{% block script %}
+	 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="{% static "www/js/menu.js" %}" type="text/javascript" charset="utf-8"></script>
+	{% endblock %}
 </head>
 <body>
 	<div id="blockpage">
@@ -81,9 +86,6 @@
 	
 	</div>
 
-	{% block script %}
-	 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="{% static "www/js/menu.js" %}" type="text/javascript" charset="utf-8"></script>
-	{% endblock %}
+	
 </body>
 </html>
