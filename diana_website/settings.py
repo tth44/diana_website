@@ -52,6 +52,7 @@ INSTALLED_APPS = (
     'main_app',
     'portfolio',
     'cv',
+    'collectfast',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -119,6 +120,7 @@ MEDIA_URL = '/media/'
 #S3 config
 USE_S3 = True
 if USE_S3:
+    AWS_PRELOAD_METADATA = True
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
