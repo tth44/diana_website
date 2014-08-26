@@ -18,6 +18,7 @@ class SubCVCategory(main_app.models.CategoryAbstract):
     
     class Meta:
         app_label= "cv"
+        ordering = ['position']
         
     
 class CVItem(main_app.models.ContentAbstract):
