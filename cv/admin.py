@@ -10,6 +10,8 @@ class CVItemInlines(admin.StackedInline):
 class SubCVCategoryAdmin(admin.ModelAdmin):
     inlines = [CVItemInlines]
     prepopulated_fields = {'display_title': ('title',)}
+    class Media:
+        js= ('www/tinymce/js/tinymce/tinymce.min.js','www/tinymce/js/tinymce/textareas.js')
     
     
 admin.site.register(SubCVCategory, SubCVCategoryAdmin)

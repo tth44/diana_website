@@ -53,6 +53,7 @@ INSTALLED_APPS = (
     'portfolio',
     'cv',
     'collectfast',
+    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,6 +107,7 @@ TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR,'static','www') 
 
 #reportory outside of any application (at top-level)
 STATICFILES_DIRS = (("www",os.path.join(BASE_DIR, "static")),
@@ -118,7 +120,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #S3 config
-USE_S3 = True
+USE_S3 = False
 if USE_S3:
     AWS_PRELOAD_METADATA = True
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
