@@ -10,6 +10,6 @@ class ContentInlines(admin.StackedInline):
 class CategoryAdmin(admin.ModelAdmin):
     inlines =[ContentInlines]
     class Media:
-        js= ('www/tinymce/js/tinymce/tinymce.min.js','www/tinymce/js/tinymce/textareas.js')
+        js= ('//tinymce.cachefly.net/4.1/tinymce.min.js','www/tinymce/js/tinymce/textareas.js')
     
 admin.site.register(Category, CategoryAdmin)

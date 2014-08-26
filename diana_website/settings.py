@@ -120,7 +120,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #S3 config
-USE_S3 = True
+USE_S3 = False
 if USE_S3:
     AWS_PRELOAD_METADATA = True
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
